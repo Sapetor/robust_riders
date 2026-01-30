@@ -24,13 +24,27 @@
 - [x] **Velocity control** - `set_velocity_and_request_state()` working
 - [x] **Arrow key driving** - Real-time control with `demo_drive.py`
 
+#### Perception Development
+- [x] **Camera feed** - Live camera access working (`camera_feed.py`)
+- [x] **Lane detection** - Basic Canny/Hough implementation (`lane_detection.py`)
+- [x] **Lane following** - Autonomous steering prototype (`lane_following.py`)
+
+#### Research
+- [x] **ACC 2025 resources** - Found official competition repo and examples
+- [x] **Lane detection approaches** - Documented recommended methods
+- [x] **External resources** - Created [[External-Resources]] reference page
+
 #### Scripts Created
 | Script | Purpose |
 |--------|---------|
 | `test_qlabs.py` | Basic connection test |
 | `test_spawn.py` | QCar spawn verification |
 | `demo_drive.py` | Arrow key velocity control |
-| `setup_competition.py` | Competition scenario (for Open World) |
+| `camera_feed.py` | Live camera display |
+| `lane_detection.py` | Lane detection visualization |
+| `lane_following.py` | Autonomous lane following |
+| `drive_with_lanes.py` | Manual driving + lane view |
+| `setup_competition.py` | Competition scenario (Open World) |
 
 ---
 
@@ -42,15 +56,16 @@
 - Competition flooring script is for **Open World** but needs version alignment
 - Velocity control requires continuous key presses (hold to accelerate)
 - Speed persists until changed (momentum-based)
+- **Lane detection**: Basic Canny/Hough is fragile - need HSV filtering + perspective transform
 
 ---
 
 ## 🔄 In Progress
 
+- [ ] Improve lane detection (HSV filtering, bird's eye view)
 - [ ] Tech stack decision (Python-only vs ROS)
-- [ ] Competition scenario in Cityscape
-- [ ] Camera feed access
-- [ ] Lane detection
+- [ ] Sign/traffic light detection
+- [ ] Path planning (Taxi Hub → Pickup → Dropoff)
 
 ---
 
@@ -69,5 +84,6 @@
 
 - [[Development-Plan]] - Full development plan
 - [[Development-Plan-Summary]] - Quick overview
+- [[External-Resources]] - External links and resources
 - [[Detailed-Scenario]] - Competition scenario details
 
