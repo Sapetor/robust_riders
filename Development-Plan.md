@@ -14,10 +14,10 @@
 #### Tasks
 | Task | Priority | Est. Time | Status |
 |------|----------|-----------|--------|
-| Install Docker & ROS 2 environment | 🔴 High | 2h | [ ] |
+| **🔴 DECIDE: Tech stack** (Python-only vs ROS vs MATLAB) | 🔴 High | 2h | [ ] |
+| Set up development environment (based on decision) | 🔴 High | 2h | [ ] |
 | Set up QLabs and verify license | 🔴 High | 1h | [ ] |
-| Clone ROS technical resources | 🔴 High | 30m | [ ] |
-| Run Virtual ROS Software Setup | 🔴 High | 2h | [ ] |
+| Clone technical resources | 🔴 High | 30m | [ ] |
 | Test basic QCar 2 movement | 🔴 High | 2h | [ ] |
 | Understand sensor data streams | 🟡 Med | 3h | [ ] |
 | Document API usage notes | 🟢 Low | 1h | [ ] |
@@ -440,7 +440,7 @@ acc2026-self-driving/
 ### Technical Decisions
 | Date | Decision | Rationale |
 |------|----------|-----------|
-| | Use ROS 2 | Official support from Quanser |
+| | **TBD: Tech stack** | Python-only vs ROS vs MATLAB - pending decision |
 | | Classical CV for lanes | Faster development, simpler debugging |
 | | Pure Pursuit for steering | Proven technique for path following |
 

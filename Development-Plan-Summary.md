@@ -61,7 +61,8 @@
 ## 📋 Quick Checklist
 
 ### Week 1: Setup ✅
-- [ ] Set up ROS development environment
+- [ ] **🔴 DECIDE: Tech stack** (Python-only vs ROS vs MATLAB)
+- [ ] Set up development environment
 - [ ] Install QLabs and verify connection
 - [ ] Run basic QCar 2 control examples
 - [ ] Understand sensor APIs
