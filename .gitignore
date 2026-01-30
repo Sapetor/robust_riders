@@ -1,0 +1,15 @@
+# Obsidian
+.obsidian/
+
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor backups
+*~
+*.swp
+*.swo
+
+# Log files
+*.log
