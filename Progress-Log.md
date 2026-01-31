@@ -62,10 +62,11 @@
 
 ## 🔄 In Progress
 
+- [x] **Tech stack decision** - Pure Python on Windows (port to pal/hal for submission)
 - [ ] Improve lane detection (HSV filtering, bird's eye view)
-- [ ] Tech stack decision (Python-only vs ROS)
 - [ ] Sign/traffic light detection
 - [ ] Path planning (Taxi Hub → Pickup → Dropoff)
+- [ ] Port to pal/hal for final submission
 
 ---
 
