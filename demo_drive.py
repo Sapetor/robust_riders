@@ -80,11 +80,11 @@ def main():
                 print(f"\r  Speed: {speed:.1f}  Turn: {turn:.1f}    ", end="")
                 
             elif keyboard.is_pressed('left'):
-                turn = min(turn + 0.1, 0.5)
+                turn = max(turn - 0.1, -0.5)  # Negative = turn left
                 print(f"\r  Speed: {speed:.1f}  Turn: {turn:.1f}    ", end="")
-                
+
             elif keyboard.is_pressed('right'):
-                turn = max(turn - 0.1, -0.5)
+                turn = min(turn + 0.1, 0.5)   # Positive = turn right
                 print(f"\r  Speed: {speed:.1f}  Turn: {turn:.1f}    ", end="")
                 
             elif keyboard.is_pressed('space'):
@@ -97,8 +97,8 @@ def main():
                 forward=speed,
                 turn=turn,
                 headlights=True,
-                leftTurnSignal=(turn > 0.1),
-                rightTurnSignal=(turn < -0.1),
+                leftTurnSignal=(turn < -0.1),
+                rightTurnSignal=(turn > 0.1),
                 brakeSignal=(speed == 0),
                 reverseSignal=(speed < 0)
             )

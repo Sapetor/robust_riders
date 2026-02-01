@@ -185,9 +185,9 @@ def main():
                 speed = max(speed - 0.05, -0.5)
 
             if keyboard.is_pressed('left'):
-                turn = 0.4
+                turn = -0.4  # Turn left (negative)
             elif keyboard.is_pressed('right'):
-                turn = -0.4
+                turn = 0.4   # Turn right (positive)
             else:
                 turn *= 0.8  # Decay
 

@@ -1519,9 +1519,9 @@ def main():
 
             # Steering control - supports both arrow keys and WASD
             if keyboard.is_pressed('left') or keyboard.is_pressed('a'):
-                turn = 0.5   # Turn left (positive)
+                turn = -0.5  # Turn left (negative)
             elif keyboard.is_pressed('right') or keyboard.is_pressed('d'):
-                turn = -0.5  # Turn right (negative)
+                turn = 0.5   # Turn right (positive)
             elif keyboard.is_pressed('space'):
                 turn = 0.0
                 speed_controller.current_speed = 0.0
