@@ -41,12 +41,12 @@
 
 | Task | Priority | Est. Time | Status |
 |------|----------|-----------|--------|
-| Camera image acquisition pipeline | 🔴 High | 2h | [ ] |
-| Lane detection algorithm | 🔴 High | 6h | [ ] |
-| Lane centering calculation | 🔴 High | 3h | [ ] |
-| Traffic light detection | 🔴 High | 4h | [ ] |
-| Traffic light state classification | 🔴 High | 3h | [ ] |
-| Stop sign detection | 🟡 Med | 3h | [ ] |
+| Camera image acquisition pipeline | 🔴 High | 2h | [x] ✅ |
+| Lane detection algorithm | 🔴 High | 6h | [x] ✅ Hough lines + curvature |
+| Lane centering calculation | 🔴 High | 3h | [x] ✅ PID steering controller |
+| Traffic light detection | 🔴 High | 4h | [x] ✅ HSV detection (toggleable) |
+| Traffic light state classification | 🔴 High | 3h | [x] ✅ RED/YELLOW/GREEN |
+| Stop sign detection | 🟡 Med | 3h | [x] ✅ Octagon shape detection |
 | Pedestrian detection | 🟡 Med | 4h | [ ] |
 
 ##### Lane Detection Approaches
@@ -110,11 +110,11 @@ Backup: Camera-based landmark detection
 
 | Task | Priority | Est. Time | Status |
 |------|----------|-----------|--------|
-| Waypoint graph of Quanser City | 🔴 High | 4h | [ ] |
-| A* or Dijkstra path search | 🔴 High | 3h | [ ] |
-| Path-to-trajectory conversion | 🔴 High | 3h | [ ] |
+| Waypoint graph of Quanser City | 🔴 High | 4h | [x] ✅ PATHS dict with curves |
+| A* or Dijkstra path search | 🔴 High | 3h | N/A (fixed routes) |
+| Path-to-trajectory conversion | 🔴 High | 3h | [x] ✅ Sequential waypoints |
 | Dynamic replanning for obstacles | 🟡 Med | 4h | [ ] |
-| Nav2 integration (if using ROS) | 🟡 Med | 4h | [ ] |
+| Nav2 integration (if using ROS) | 🟡 Med | 4h | N/A (pure Python) |
 
 ##### Key Coordinates to Map
 | Location | Coordinates | Purpose |
@@ -140,11 +140,11 @@ See [[Coordinate-System]] for coordinate reference.
 
 | Task | Priority | Est. Time | Status |
 |------|----------|-----------|--------|
-| Steering controller (PID/Pure Pursuit) | 🔴 High | 4h | [ ] |
-| Speed controller | 🔴 High | 3h | [ ] |
-| Lane following behavior | 🔴 High | 4h | [ ] |
-| Stop execution at coordinates | 🔴 High | 2h | [ ] |
-| Stop at traffic controls | 🔴 High | 3h | [ ] |
+| Steering controller (PID/Pure Pursuit) | 🔴 High | 4h | [x] ✅ PID for lane + waypoint |
+| Speed controller | 🔴 High | 3h | [x] ✅ Curvature-based adjustment |
+| Lane following behavior | 🔴 High | 4h | [x] ✅ Hybrid lane/waypoint |
+| Stop execution at coordinates | 🔴 High | 2h | [x] ✅ Stable arrival detection |
+| Stop at traffic controls | 🔴 High | 3h | [x] ✅ Traffic light/sign stops |
 
 ##### Control Architecture
 ```python
@@ -166,9 +166,9 @@ class VehicleController:
 
 | Task | Priority | Est. Time | Status |
 |------|----------|-----------|--------|
-| LED API integration | 🔴 High | 1h | [ ] |
-| State machine for LED colors | 🔴 High | 2h | [ ] |
-| Automatic LED transitions | 🔴 High | 1h | [ ] |
+| LED API integration | 🔴 High | 1h | [x] ✅ |
+| State machine for LED colors | 🔴 High | 2h | [x] ✅ TaxiState enum |
+| Automatic LED transitions | 🔴 High | 1h | [x] ✅ On state change |
 
 ##### LED State Machine
 See [[LED-Protocol]] for complete reference.

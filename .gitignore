@@ -13,3 +13,24 @@ desktop.ini
 
 # Log files
 *.log
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.python-version
+
+# Screenshots (don't commit debug images)
+*.png
+*.jpg
+*.jpeg
+
+# YOLO training
+datasets/
+models/
+runs/
+
+# Virtual environments
+venv/
+.venv/
+env/
