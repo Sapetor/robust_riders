@@ -62,7 +62,8 @@ The main navigation system combining:
 
 ### YOLO Road Detection (In Progress)
 
-Training a YOLOv8 classifier for road features:
+Training a YOLOv8 classifier for road features. See [[YOLO-Training]] for full guide.
+
 1. `capture_training_data.py` - Capture & label images
 2. `train_yolo.py` - Train the model
 3. `yolo_road_detector.py` - Use trained model
