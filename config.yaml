@@ -1,0 +1,53 @@
+# ACC2026 Navigation Configuration
+
+navigation:
+  lane_enter_threshold: 0.25
+  lane_exit_threshold: 0.10
+  min_mode_duration: 1.0
+  arrival_threshold: 0.25
+  arrival_stable_frames: 5
+  waypoint_threshold: 0.3
+
+speed:
+  max_speed: 0.35
+  min_speed: 0.0
+  accel_rate: 0.15
+  decel_rate: 0.25
+  roundabout_speed: 0.20
+  intersection_speed: 0.15
+  approach_speed: 0.15
+
+lane_detection:
+  pid_kp: 0.8
+  pid_ki: 0.05
+  pid_kd: 0.3
+  hough_threshold: 30
+  hough_min_line_length: 20
+  hough_max_line_gap: 100
+  roi_top_ratio: 0.55
+  roi_left_ratio: 0.15
+  roi_right_ratio: 0.85
+
+sign_detection:
+  yolo_model: "yolo26n.pt"
+  yolo_confidence: 0.5
+  use_hsv_fallback: true
+  roundabout_trigger_distance: 0.8
+  stop_trigger_distance: 0.5
+  yield_trigger_distance: 0.6
+
+safety:
+  stuck_threshold: 5.0
+  min_total_movement: 0.1
+
+telemetry:
+  enabled: true
+  log_directory: "logs"
+  save_video: true
+  video_fps: 15
+
+logging:
+  level: INFO
+  console: true
+  file: true
+  file_path: "logs/navigation.log"
